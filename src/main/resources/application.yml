@@ -1,0 +1,14 @@
+weatherapi:
+  api-key: 82cc89c7a4e741a88c490636242702
+  host: http://api.weatherapi.com
+
+  spring:
+    jpa:
+      generate-ddl: true
+      ddl-auto: update
+      database: default
+      show-sql: true
+      datasource:
+        continue-on-error: false
+        generate-unique-name: false
+        username: app
