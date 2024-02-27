@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service
 class WeatherService constructor(val repository: WeatherRepository, val api: WeatherAPIClient){
 
     fun getAll(): List<WeatherInfo> {
-        return repository.findAll();
+        return repository.findAll()
     }
 
     fun getForCity(city: String?): List<WeatherInfo> {

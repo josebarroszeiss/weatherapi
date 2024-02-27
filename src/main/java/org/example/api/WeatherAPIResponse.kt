@@ -8,6 +8,7 @@ data class WeatherAPIResponse constructor(val location: Location, val forecast: 
         val country = location.country
         val city = location.city
         return forecast.days.map { f ->
+            val temp = f.temperature.avgF
             WeatherInfo(
                 null,  // id is null because this will be a new entity
                 region,
@@ -15,7 +16,7 @@ data class WeatherAPIResponse constructor(val location: Location, val forecast: 
                 "",
                 city,
                 f.date,
-                "%.2f".formatted(f.temperature.avgF)
+                "$temp F"
             )
         }.toList()
     }
